@@ -23,6 +23,8 @@ nginx_service:        ##Nginx服务管理
        - /sbin/chkconfig --level 35 nginx on
     - unless: /sbin/chkconfig --list nginx
   service.running:        ##Nginx启动状态
+    - watch:
+      - file: /usr/local/nginx/conf/nginx.conf
     - name: nginx
     - enable: True
     - reload: True
