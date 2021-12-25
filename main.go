@@ -7,5 +7,5 @@ import (
 
 func main() {
 	fmt.Println("测试不同目录的包")
-	wsjssh.Ssh()
+	wsjssh.Test_SSH_run()
 }
