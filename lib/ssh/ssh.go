@@ -9,6 +9,7 @@ import (
 	"time"
 
 	"golang.org/x/crypto/ssh"
+	_ "golang.org/x/crypto/ssh"
 )
 
 const (
@@ -19,8 +20,6 @@ const (
 	cmd      = "whoami"
 	key      = `D:\id_rsa_2048`
 )
-
-
 
 func connect(user, password, host, key string, port int, cipherList []string) (*ssh.Session, error) {
 	var (
